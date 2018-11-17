@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  vote:
+    image: patnaikshekhar/votecounter:1
+    build: .
+    ports:
+      - 8080:80
+  cache:
+    image: redis
+
