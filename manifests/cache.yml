@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: cache
+  labels:
+    type: cache
 spec:
   containers:
     - image: redis
@@ -13,7 +15,7 @@ metadata:
   name: cache
 spec:
   selector:
-    name: cache
+    type: cache
   ports:
     - protocol: TCP
       port: 6379
